@@ -4,7 +4,7 @@
       <img [src]="item.images | noimages" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
-        <p class="card-text"><span *ngFor="let artist of item.artists" class="badge text-bg-primary">
+        <p class="card-text"><span *ngFor="let artist of item.artists" class="badge text-bg">
           {{artist.name}}
         </span></p>
       </div>

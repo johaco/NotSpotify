@@ -1,0 +1,45 @@
+/* Estilos generales */
+body {
+  color: white; /* Establece el color del texto en blanco */
+}
+
+/* Estilos para la tabla */
+.custom-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #fff; /* Color del texto */
+  background-color: transparent; /* Fondo transparente */
+  border-collapse: collapse; /* Colapsa bordes */
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid white; /* Borde superior blanco */
+}
+
+/* Estilos para el encabezado */
+.custom-thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid white; /* Borde inferior blanco */
+  background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro */
+}
+
+/* Estilos para las filas */
+.custom-table tbody tr {
+  border-bottom: 1px solid white; /* Borde inferior blanco */
+}
+
+.custom-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente al pasar el ratón */
+}
+
+/* Eliminar bordes laterales */
+.custom-table td,
+.custom-table th {
+  border-left: none;
+  border-right: none;
+}
+
+

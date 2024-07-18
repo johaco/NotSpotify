@@ -16,7 +16,7 @@ export class SpotifyService {
   getQuery(query: string){
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({
-      'Authorization' : 'Bearer BQBaio7vLNOKuBhC4iUwzPVJ7ET_O3wI4smv_Eux5hrBzDdkC1bRr0hOUyfz931i4tu2ayvCNYFhc8u7uTu4dTU1OMSdINsjd-UXgALYi1Y80mCefRM'
+      'Authorization' : 'Bearer BQDfVlTPCdpGXsonwYwmc2wFUKOyiub4uff1DfCNsW7ASf12C-zRAyzn1XrMJLSXdKTCDkKwiI_MgIhgE-YNsmlBmSbq50ic5n4waxpjM_AKHsa40Vo'
     }); // Token se renueva cada una hora
     return this.http.get(url, {headers: headers});
   }
@@ -29,5 +29,14 @@ export class SpotifyService {
   getArtists(termino : string){
     return this.getQuery(`search?q=${termino}&type=artist&limit=20`)
       .pipe( map( (data : any) => data['artists'].items)); // retornando la data de los artistas
+  }
+  getArtist(id : string){
+    return this.getQuery(`artists/${id}`);
+    //   .pipe( map( (data : any) => data['artists'].items)); // retornando la data de los artistas
+  }
+
+  getTopTracks(id : string){
+    return this.getQuery(`artists/${id}/top-tracks`)
+      .pipe( map( (data : any) => data['tracks'])); // retornando la data de los artistas
   }
 }
